@@ -1,0 +1,193 @@
+// Navigation Styles
+@import "colors";
+@import "queries";
+@import "../animations/animations";
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background: transparent;
+  height: 60px;
+  @extend %align-center;
+  justify-content: space-around;
+  padding: 0.5rem calc((100vw - 1280px) / 2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    display: block;
+  }
+
+  &__logo {
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+
+    @extend %align-center;
+    @include tablet {
+      margin-left: 20px;
+      font-size: 1.5rem;
+      margin-top: 8.5px;
+    }
+    @include tablet-lg {
+      padding-right: 1.4rem;
+    }
+  }
+
+  &__logo,
+  &__menu--links {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__bar {
+    opacity: 0;
+    @include tablet {
+      opacity: 1;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+      background: $white;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  &__menu {
+    @extend %align-center;
+    margin-right: 24px;
+    list-style: none;
+    text-align: center;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 100px);
+      position: absolute;
+      width: 100%;
+      top: -1000px;
+    }
+
+    &--links {
+      color: #fff;
+      @extend %align-center;
+      justify-content: center;
+      text-decoration: none;
+      padding-right: 4rem;
+
+      @include tablet-lg {
+        padding-right: 1rem;
+      }
+
+      &:hover {
+        color: #b8e9e9;
+        transition: all 0.3s ease;
+      }
+
+      @include tablet {
+        font-size: 1.3rem;
+      }
+
+      @include tablet {
+        padding: 0;
+
+        &:hover {
+          background: #021010;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  &__menu--btn {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: $black;
+    color: #fff;
+    padding: 0.4em 1em;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+      transition: all 0.3s ease;
+    }
+
+    @include tablet {
+      background: $olive;
+      padding: 1em 1em;
+      font-size: 1.3rem;
+      width: 80%;
+      margin: 0 auto;
+      border: 3px solid $sand;
+
+      &:hover {
+        background: $white;
+        color: $olive;
+        border: 3px solid $sand;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
+.fa-arrow-right {
+  padding-left: 0.5em;
+}
+
+#mobile-menu {
+  position: absolute;
+  top: 15%;
+  right: 6%;
+  transform: translate(5%, 20%);
+}
+
+// Menu-Bars Animation
+#mobile-menu.is-active .navbar__bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .navbar__bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .navbar__bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar__menu.active {
+  @include tablet {
+    top: 100%;
+    opacity: 1;
+    z-index: 99;
+    height: 100vh;
+    font-size: 1.5rem;
+    background: $forest;
+  }
+}
+
+body.active {
+  @include tablet {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 1100px;
+
+  @include tablet-lg {
+    width: 95vw;
+  }
+}
