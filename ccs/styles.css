@@ -343,7 +343,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1099px) {
   .form {
-    margin: 10px 10px 24px 20px;
+    justify-content: center;
   }
 }
 
@@ -372,7 +372,7 @@ input {
   outline: none;
   border-bottom: 1.4px solid;
   padding-left: 30px;
-  margin-right: 24px;
+  margin-right: 15px;
   margin-top: 15px;
   padding-bottom: 15px;
 }
@@ -426,7 +426,6 @@ input {
   max-width: 1100px;
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 60px;
   background-color: #232f33;
   padding-top: 10px;
   padding-bottom: 50px;
@@ -434,6 +433,7 @@ input {
 @media screen and (max-width: 767px) and (max-width: 998px) {
   .holiday {
     width: 95%;
+    padding-bottom: 0px;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -459,23 +459,17 @@ input {
 }
 .cards__item {
   display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
-@media screen and (min-width: 1100px) {
-  .cards__item {
-    padding: 1rem;
-  }
-}
-
 @media screen and (max-width: 280px) {
   .cards__item {
-    width: 100%;
-    margin: 0 auto;
+    margin-bottom: 15px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 998px) {
   .cards__item {
-    width: 100%;
-    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -486,6 +480,7 @@ input {
 }
 @media screen and (min-width: 1100px) {
   .cards__item {
+    padding: 0.2em;
     width: 33.3333%;
   }
 }
@@ -497,12 +492,7 @@ input {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-@media screen and (max-width: 767px) and (max-width: 998px) {
-  .card {
-    width: 53%;
-    margin: 0 auto;
-  }
+  flex-grow: 1;
 }
 @media screen and (min-width: 768px) and (max-width: 1099px) {
   .card {
@@ -523,13 +513,18 @@ input {
 .card__content {
   padding: 1em;
   background: linear-gradient(to bottom left, #2c361e 40%, #666102 100%);
+  flex-grow: 1;
 }
 .card__image {
-  height: auto;
-  max-width: 100%;
+  height: 100%;
+  width: 100%;
   vertical-align: middle;
   align-items: center;
   display: flex;
+}
+.card img, .card picture {
+  width: 100%;
+  height: 100%;
 }
 .card__title {
   color: #fff;
