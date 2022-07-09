@@ -95,9 +95,43 @@
               <div class="card">
                 <div class="card__image">
                   <picture>
-                    <source srcset="images/greece_sm.webp 768w, images/greece_sm.jpg 1.5x">
-                    <source srcset="images/greece_md.webp, images/greece_md.pg 2x">
-                    <img src="images/greece_sm.jpg" alt="Greece sea front view">
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="
+                        images/greece_lg.webp 575w,
+                        images/greece_lg.jpg  575w
+                        images/greece_lg@2x.jpg  1150w,
+                        images/greece_lg@2x.webp  1150w,
+                        images/greece_lg@3x.jpg  1725w,
+                        images/greece_lg@3x.webp  1725w
+                      "
+                    />
+                    <source
+                      media="(min-width: 600px)"
+                      srcset="
+                        images/greece_md.webp 475w,
+                        images/greece_md.jpg 475w,
+                        images/greece_md@2x.webp 950w,
+                        images/greece_md@2x.jpg 950w,
+                        images/greece_md@3x.webp 1425w,
+                        images/greece_md@3x.jpg 1425w
+                      "
+                    />
+                    <source
+                      srcset="
+                        images/greece_sm.webp,
+                        images/greece_sm@2x.webp,
+                        images/greece_sm@2x.jpg,
+                        images/greece_sm@3x.jpg
+                      "
+                    />
+                    <img
+                      src="images/greece_sm.jpg"
+                      class="img"
+                      alt="Greece sea front view"
+                      width="100%"
+                      height="100%"
+                    />
                   </picture>
                 </div>
                 <div class="card__content">
@@ -111,7 +145,45 @@
             <li class="cards__item">
               <div class="card">
                 <div class="card__image">
-                  <img src="/images/barcelona.jpg" alt="Barcelona town view" />
+                  <picture>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="
+                        images/barcelona_lg.webp 575w,
+                        images/barcelona_lg.jpg  575w
+                        images/barcelona_lg@2x.jpg 1150w,
+                        images/barcelona_lg@2x.webp 1150w,
+                        images/barcelona_lg@3x.jpg 1725w,
+                        images/barcelona_lg@3x.webp 1725w
+                      "
+                    />
+                    <source
+                      media="(min-width: 600px)"
+                      srcset="
+                        images/barcelona_md.webp     475w,
+                        images/barcelona_md.jpg      475w,
+                        images/barcelona_md@2x.webp  950w,
+                        images/barcelona_md@2x.jpg   950w,
+                        images/barcelona_md@3x.webp 1425w,
+                        images/barcelona_md@3x.jpg  1425w
+                      "
+                    />
+                    <source
+                      srcset="
+                        images/barcelona_sm.webp,
+                        images/barcelona_sm.jpg,
+                        images/barcelona_sm@2x.webp,
+                        images/barcelona_sm@2x.jpg,
+                        images/barcelona_sm@3x.jpg
+                      "
+                    />
+                    <img
+                      src="/images/barcelona_sm.jpg"
+                      alt="Barcelona town view"
+                      width="375"
+                      height="250"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h2 class="card__title">Barcelona</h2>
@@ -125,10 +197,46 @@
             <li class="cards__item">
               <div class="card">
                 <div class="card__image">
-                  <img
-                    src="/images/portugal.jpg"
-                    alt="Portugal Porto air view "
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 960px)"
+                      srcset="
+                        images/portugal_lg.webp 575w,
+                        images/portugal_lg.jpg 575w
+                        images/portugal_lg@2x.jpg 1150w,
+                        images/portugal_lg@2x.webp 1150w,
+                        images/portugal_lg@3x.jpg 1725w,
+                        images/portugal_lg@3x.webp 1725w
+                      "
+                    />
+                    <source
+                      media="(min-width: 600px)"
+                      srcset="
+                        images/portugal_md.webp 475w,
+                        images/portugal_md.jpg 475w,
+                        images/portugal_md@2x.webp 950w,
+                        images/portugal_md@2x.jpg 950w,
+                        images/portugal_md@3x.webp 1425w,
+                        images/portugal_md@3x.jpg 1425w
+                      "
+                    />
+                    <source
+                      srcset="
+                        images/portugal_sm.webp,
+                        images/portugal_sm.jpg,
+                        images/portugal_sm@2x.webp,
+                        images/portugal_sm@2x.jpg,
+                        images/portugal_sm@3x.webp,
+                        images/portugal_sm@3x.jpg
+                      "
+                    />
+                    <img
+                      src="/images/portugal_sm.jpg"
+                      alt="Portugal Porto air view "
+                      width="375"
+                      height="250"
+                    />
+                  </picture>
                 </div>
                 <div class="card__content">
                   <h2 class="card__title">Portugal</h2>
