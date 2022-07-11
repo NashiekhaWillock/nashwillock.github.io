@@ -270,7 +270,7 @@ body {
 /* The background image */
 .bg-image {
   background: #666102;
-  background-image: url("src/images/hero_2x.jpg");
+  background-image: url("/src/images/hero_2x.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
