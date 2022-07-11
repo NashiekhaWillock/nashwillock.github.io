@@ -1,0 +1,20 @@
+{
+  "name": "holiday",
+  "version": "1.0.0",
+  "description": "HTML Interview Test",
+  "main": "index.js",
+ "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+    "devDependencies": {
+    "vite": "^2.9.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github:NashWillock/nashwillock.github.io"
+  },
+  "author": "Nash Willock",
+  "license": "ISC"
+}
